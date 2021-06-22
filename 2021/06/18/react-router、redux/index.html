@@ -20,30 +20,33 @@
     var CONFIG = {"hostname":"doublewhite.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="我偏要勉强">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DoubleWhite">
-<meta property="og:url" content="http://doublewhite.top/index.html">
+  <meta name="description" content="1. React脚手架包含了所有需要的配置，制定好了所有的依赖，可以直接安装编译运行一个简单效果。React脚手架创建方法： 1234npm install -g create-react-appcreate-react-app xxxcd xxxnpm start  2. React AjaxReact本身只关注与界面，并不包含发送ajax请求的代码，前端应用需要通过ajax请求与后台进行交互（">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react-router、redux">
+<meta property="og:url" content="http://doublewhite.top/2021/06/18/react-router%E3%80%81redux/index.html">
 <meta property="og:site_name" content="DoubleWhite">
-<meta property="og:description" content="我偏要勉强">
+<meta property="og:description" content="1. React脚手架包含了所有需要的配置，制定好了所有的依赖，可以直接安装编译运行一个简单效果。React脚手架创建方法： 1234npm install -g create-react-appcreate-react-app xxxcd xxxnpm start  2. React AjaxReact本身只关注与界面，并不包含发送ajax请求的代码，前端应用需要通过ajax请求与后台进行交互（">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-06-18T09:15:41.000Z">
+<meta property="article:modified_time" content="2021-06-22T15:07:17.092Z">
 <meta property="article:author" content="doublewhite">
+<meta property="article:tag" content="React">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://doublewhite.top/">
+<link rel="canonical" href="http://doublewhite.top/2021/06/18/react-router%E3%80%81redux/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>DoubleWhite</title>
+  <title>react-router、redux | DoubleWhite</title>
   
 
 
@@ -181,9 +184,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -199,10 +203,9 @@
       <meta itemprop="name" content="DoubleWhite">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/18/react-router%E3%80%81redux/" class="post-title-link" itemprop="url">react-router、redux</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          react-router、redux
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -262,7 +265,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="1-React脚手架"><a href="#1-React脚手架" class="headerlink" title="1. React脚手架"></a>1. React脚手架</h1><p>包含了所有需要的配置，制定好了所有的依赖，可以直接安装编译运行一个简单效果。React脚手架创建方法：</p>
+        <h1 id="1-React脚手架"><a href="#1-React脚手架" class="headerlink" title="1. React脚手架"></a>1. React脚手架</h1><p>包含了所有需要的配置，制定好了所有的依赖，可以直接安装编译运行一个简单效果。React脚手架创建方法：</p>
 <figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">npm </span><span class="string">install </span>-g <span class="built_in">create-react-app</span></span><br><span class="line"><span class="built_in">create-react-app</span> <span class="string">xxx</span></span><br><span class="line"><span class="string">cd </span><span class="string">xxx</span></span><br><span class="line"><span class="string">npm </span><span class="string">start</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="2-React-Ajax"><a href="#2-React-Ajax" class="headerlink" title="2. React Ajax"></a>2. React Ajax</h1><p>React本身只关注与界面，并不包含发送ajax请求的代码，前端应用需要通过ajax请求与后台进行交互（json数据）。</p>
@@ -284,638 +287,40 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount () &#123;</span><br><span class="line">  const url &#x3D; &#96;https:&#x2F;&#x2F;api.github.com&#x2F;search&#x2F;repositories?q&#x3D;r&amp;sort&#x3D;stars&#96;</span><br><span class="line">  try &#123;</span><br><span class="line">    const response &#x3D; await fetch(url)</span><br><span class="line">    const data &#x3D; await response.json()</span><br><span class="line">    console.log(data)</span><br><span class="line">  &#125; catch (error) &#123;</span><br><span class="line">    console.log(&#39;error!&#39;, error)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/React/" rel="tag"># React</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://doublewhite.top/2021/06/13/React%E5%9F%BA%E7%A1%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="doublewhite">
-      <meta itemprop="description" content="我偏要勉强">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DoubleWhite">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/13/React%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">React基础</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-06-13 20:35:22" itemprop="dateCreated datePublished" datetime="2021-06-13T20:35:22+08:00">2021-06-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2021/06/13/React%E5%9F%BA%E7%A1%80/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/13/React%E5%9F%BA%E7%A1%80/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>16k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>15 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1-React基本使用"><a href="#1-React基本使用" class="headerlink" title="1. React基本使用"></a>1. React基本使用</h1><h2 id="1-1-React高效的原因"><a href="#1-1-React高效的原因" class="headerlink" title="1.1 React高效的原因"></a>1.1 React高效的原因</h2><ul>
-<li>虚拟DOM，不总是直接操作DOM</li>
-<li>DOM Diff算法，最小化页面重绘</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/06/13/React%E5%9F%BA%E7%A1%80/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://doublewhite.top/2020/07/02/Promise%E3%80%81Vuex%E3%80%81axios/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="doublewhite">
-      <meta itemprop="description" content="我偏要勉强">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DoubleWhite">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/02/Promise%E3%80%81Vuex%E3%80%81axios/" class="post-title-link" itemprop="url">Promise、Vuex、axios</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-02 11:22:50" itemprop="dateCreated datePublished" datetime="2020-07-02T11:22:50+08:00">2020-07-02</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/07/02/Promise%E3%80%81Vuex%E3%80%81axios/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/02/Promise%E3%80%81Vuex%E3%80%81axios/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>8.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1-Promise"><a href="#1-Promise" class="headerlink" title="1. Promise"></a>1. Promise</h1><p>Promise是异步编程的一种解决方案。一般情况下有异步操作时，使用Promise对这个异步操作进行封装。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/02/Promise%E3%80%81Vuex%E3%80%81axios/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/06/13/React%E5%9F%BA%E7%A1%80/" rel="prev" title="React基础">
+      <i class="fa fa-chevron-left"></i> React基础
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://doublewhite.top/2020/06/19/Vue%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="doublewhite">
-      <meta itemprop="description" content="我偏要勉强">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DoubleWhite">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/19/Vue%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/" class="post-title-link" itemprop="url">Vue模块化开发</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-06-19 11:16:49" itemprop="dateCreated datePublished" datetime="2020-06-19T11:16:49+08:00">2020-06-19</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/06/19/Vue%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/Vue%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>10k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>9 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1-常见的模块化规范"><a href="#1-常见的模块化规范" class="headerlink" title="1. 常见的模块化规范"></a>1. 常见的模块化规范</h1><h2 id="1-1-CommonJS"><a href="#1-1-CommonJS" class="headerlink" title="1.1 CommonJS"></a>1.1 CommonJS</h2><p>模块：将一个复杂的程序依据一定的规范封装成几个块, 并进行组合。模块化有两个核心：导入和导出。</p>
-<blockquote>
-<p>导出：module.exports={ add }<br>导入：const {add}=require(‘./mathUtils.js’);</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/19/Vue%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://doublewhite.top/2020/06/12/Vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="doublewhite">
-      <meta itemprop="description" content="我偏要勉强">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DoubleWhite">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/12/Vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/" class="post-title-link" itemprop="url">Vue组件化开发</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-06-12 16:25:47" itemprop="dateCreated datePublished" datetime="2020-06-12T16:25:47+08:00">2020-06-12</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/06/12/Vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/12/Vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>8.8k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1-组件化思想和使用步骤"><a href="#1-组件化思想和使用步骤" class="headerlink" title="1. 组件化思想和使用步骤"></a>1. 组件化思想和使用步骤</h1><p>组件化：将一个页面拆分成一个个小的功能块，每个功能块完成属于自己这部分独立的功能，那么整个页面的管理和维护就变得非常容易了。</p>
-<p>Vue的组件化思想：它提供了一种抽象，让我们可以开发出一个个独立可复用的小组件来构造应用。任何的应用都会被抽象成一颗组件树。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/12/Vue%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://doublewhite.top/2020/05/27/Vue%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="doublewhite">
-      <meta itemprop="description" content="我偏要勉强">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DoubleWhite">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/27/Vue%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">Vue的基础语法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-27 17:25:10" itemprop="dateCreated datePublished" datetime="2020-05-27T17:25:10+08:00">2020-05-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/27/Vue%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/27/Vue%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>14k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>13 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1-插值操作"><a href="#1-插值操作" class="headerlink" title="1. 插值操作"></a>1. 插值操作</h1><h2 id="1-1-Mustache语法"><a href="#1-1-Mustache语法" class="headerlink" title="1.1 Mustache语法"></a>1.1 Mustache语法</h2><p>Mustache语法中不仅可以直接写变量，还可以写一些简单的表达式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;h3&gt;message:&#123;&#123; message &#125;&#125;&lt;&#x2F;h3&gt;</span><br><span class="line">&lt;h3&gt;&#123;&#123; firstName+&#39; &#39;+lastName &#125;&#125;&lt;&#x2F;h3&gt;</span><br><span class="line">&lt;h3&gt;&#123;&#123; firstName &#125;&#125; &#123;&#123; lastName &#125;&#125;&lt;&#x2F;h3&gt;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/27/Vue%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://doublewhite.top/2020/05/24/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="doublewhite">
-      <meta itemprop="description" content="我偏要勉强">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DoubleWhite">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/24/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-05-24 16:24:47" itemprop="dateCreated datePublished" datetime="2020-05-24T16:24:47+08:00">2020-05-24</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/24/hello-world/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/24/hello-world/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>357</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/24/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -962,6 +367,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-React脚手架"><span class="nav-text">1. React脚手架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-React-Ajax"><span class="nav-text">2. React Ajax</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-配置代理"><span class="nav-text">2.1 配置代理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-方法一"><span class="nav-text">2.1.1 方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-方法二"><span class="nav-text">2.1.2 方法二</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-使用axios"><span class="nav-text">2.2 使用axios</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-使用fetch"><span class="nav-text">2.3 使用fetch</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
